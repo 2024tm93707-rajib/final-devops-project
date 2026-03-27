@@ -1,22 +1,27 @@
 pipeline {
     agent any
+
     stages {
-        stage('Clone') {
+
+        stage('Clone Repository') {
             steps {
                 git 'https://github.com/yourusername/aceest-devops-project.git'
             }
         }
-        stage('Install') {
+
+        stage('Install Dependencies') {
             steps {
                 sh 'pip install -r requirements.txt'
             }
         }
-        stage('Test') {
+
+        stage('Run Tests') {
             steps {
                 sh 'pytest'
             }
         }
-        stage('Build') {
+
+        stage('Build Docker Image') {
             steps {
                 sh 'docker build -t aceest-fitness .'
             }
