@@ -34,5 +34,4 @@ jobs:
         pytest
 
     - name: Build Docker Image
-      run: |
-        docker build -t aceest-fitness .
+      run: docker build -t aceest-fitness -f docker/Dockerfile .
