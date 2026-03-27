@@ -1,47 +1,43 @@
-# ACEest Fitness DevOps Project
+# ACEest Fitness DevOps Pipeline
 
-## Overview
-This project demonstrates a complete DevOps CI/CD pipeline using Flask, Docker, GitHub Actions, and Jenkins.
+This project demonstrates a DevOps pipeline for the ACEest Fitness application.
 
-## Features
-- BMI Calculation API
-- Unit Testing with Pytest
-- Dockerized Application
-- CI/CD Pipeline using GitHub Actions
-- Jenkins Build Integration
+## Technologies
+
+- Python Flask
+- Docker
+- GitHub Actions
+- Jenkins
+- Pytest
 
 ## Run Locally
+
 pip install -r requirements.txt
 python app/app.py
 
 ## Run Tests
+
 pytest
 
 ## Docker
+
 docker build -t aceest-fitness .
 docker run -p 5000:5000 aceest-fitness
 
-## CI/CD
-Pipeline runs on:
-- Push
-- Pull Request
+## CI/CD Pipeline
 
-Stages:
-- Build
-- Lint
-- Test
-- Docker Build
+GitHub Actions automatically runs:
+
+1. Build
+2. Lint validation
+3. Unit tests
+4. Docker image creation
 
 ## Jenkins
-- Clone Repo
-- Install Dependencies
-- Run Tests
-- Build Docker Image
 
-FINAL SUBMISSION STEPS
-git init
-git add .
-git commit -m "Final DevOps Assignment Submission"
-git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/aceest-devops-project.git
-git push -u origin main
+Jenkins performs a secondary build validation by:
+
+- Pulling the repository
+- Installing dependencies
+- Running Pytest
+- Building Docker container
