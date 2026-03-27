@@ -1,8 +1,6 @@
-import pytest
-from app import create_app
+import sys
+import os
 
-@pytest.fixture
-def client():
-    app = create_app()
-    app.config['TESTING'] = True
-    return app.test_client()
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
+from app import create_app
