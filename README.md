@@ -37,3 +37,11 @@ Stages:
 - Install Dependencies
 - Run Tests
 - Build Docker Image
+
+FINAL SUBMISSION STEPS
+git init
+git add .
+git commit -m "Final DevOps Assignment Submission"
+git branch -M main
+git remote add origin https://github.com/YOUR_USERNAME/aceest-devops-project.git
+git push -u origin main
